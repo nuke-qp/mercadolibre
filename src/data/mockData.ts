@@ -1,0 +1,135 @@
+import { SaleData } from '@/types/sales';
+
+// Dados de exemplo para demonstração
+export const mockSalesData: SaleData[] = [
+  {
+    skuVendido: 'CEL001',
+    qtdVendida: 2,
+    produto: 'iPhone 14 Pro',
+    marca: 'Apple',
+    categoria: 'Celular',
+    precoUnitario: 7999.00,
+    faturamento: 15998.00,
+    loja: 'São Paulo',
+    dataVenda: new Date('2024-01-15'),
+    tipoLoja: 'Loja Física',
+    codigoCliente: 1001
+  },
+  {
+    skuVendido: 'TV002',
+    qtdVendida: 1,
+    produto: 'Smart TV 55" OLED',
+    marca: 'Samsung',
+    categoria: 'Televisão',
+    precoUnitario: 4599.00,
+    faturamento: 4599.00,
+    loja: 'Rio de Janeiro',
+    dataVenda: new Date('2024-01-20'),
+    tipoLoja: 'Online',
+    codigoCliente: 1002
+  },
+  {
+    skuVendido: 'CEL003',
+    qtdVendida: 3,
+    produto: 'Galaxy S23',
+    marca: 'Samsung',
+    categoria: 'Celular',
+    precoUnitario: 5499.00,
+    faturamento: 16497.00,
+    loja: 'São Paulo',
+    dataVenda: new Date('2024-02-05'),
+    tipoLoja: 'Loja Física',
+    codigoCliente: 1003
+  },
+  {
+    skuVendido: 'NOTE001',
+    qtdVendida: 1,
+    produto: 'MacBook Pro 14"',
+    marca: 'Apple',
+    categoria: 'Notebook',
+    precoUnitario: 12999.00,
+    faturamento: 12999.00,
+    loja: 'Belo Horizonte',
+    dataVenda: new Date('2024-02-10'),
+    tipoLoja: 'Online',
+    codigoCliente: 1004
+  },
+  {
+    skuVendido: 'TV004',
+    qtdVendida: 2,
+    produto: 'Smart TV 65" QLED',
+    marca: 'LG',
+    categoria: 'Televisão',
+    precoUnitario: 5799.00,
+    faturamento: 11598.00,
+    loja: 'Brasília',
+    dataVenda: new Date('2024-02-18'),
+    tipoLoja: 'Loja Física',
+    codigoCliente: 1005
+  },
+  {
+    skuVendido: 'CEL005',
+    qtdVendida: 4,
+    produto: 'Xiaomi 13 Pro',
+    marca: 'Xiaomi',
+    categoria: 'Celular',
+    precoUnitario: 4299.00,
+    faturamento: 17196.00,
+    loja: 'São Paulo',
+    dataVenda: new Date('2024-03-02'),
+    tipoLoja: 'Online',
+    codigoCliente: 1006
+  },
+  {
+    skuVendido: 'NOTE002',
+    qtdVendida: 1,
+    produto: 'Dell XPS 15',
+    marca: 'Dell',
+    categoria: 'Notebook',
+    precoUnitario: 9999.00,
+    faturamento: 9999.00,
+    loja: 'Rio de Janeiro',
+    dataVenda: new Date('2024-03-08'),
+    tipoLoja: 'Loja Física',
+    codigoCliente: 1007
+  },
+  {
+    skuVendido: 'TV006',
+    qtdVendida: 1,
+    produto: 'Smart TV 50" 4K',
+    marca: 'Sony',
+    categoria: 'Televisão',
+    precoUnitario: 3899.00,
+    faturamento: 3899.00,
+    loja: 'Porto Alegre',
+    dataVenda: new Date('2024-03-15'),
+    tipoLoja: 'Online',
+    codigoCliente: 1008
+  },
+  {
+    skuVendido: 'CEL007',
+    qtdVendida: 5,
+    produto: 'Motorola Edge 40',
+    marca: 'Motorola',
+    categoria: 'Celular',
+    precoUnitario: 2999.00,
+    faturamento: 14995.00,
+    loja: 'Curitiba',
+    dataVenda: new Date('2024-03-22'),
+    tipoLoja: 'Loja Física',
+    codigoCliente: 1009
+  },
+  {
+    skuVendido: 'NOTE003',
+    qtdVendida: 2,
+    produto: 'Lenovo IdeaPad',
+    marca: 'Lenovo',
+    categoria: 'Notebook',
+    precoUnitario: 4599.00,
+    faturamento: 9198.00,
+    loja: 'São Paulo',
+    dataVenda: new Date('2024-04-01'),
+    tipoLoja: 'Online',
+    codigoCliente: 1010
+  }
+];
