@@ -5,9 +5,9 @@ import {
   formatCurrency, 
   formatNumber, 
   groupByMonth, 
-  groupByStore, 
-  groupByStoreType, 
-  groupByBrand 
+  groupByRegion, 
+  groupByPaymentMethod, 
+  groupByProduct 
 } from '@/utils/dataUtils';
 import { KPICard } from '@/components/dashboard/KPICard';
 import { RevenueChart } from '@/components/dashboard/RevenueChart';
@@ -24,42 +24,42 @@ const Index = () => {
   // Valores únicos para os filtros
   const uniqueValues = useMemo(() => ({
     produtos: [...new Set(salesData.map(s => s.produto))],
-    marcas: [...new Set(salesData.map(s => s.marca))],
-    lojas: [...new Set(salesData.map(s => s.loja))],
-    categorias: [...new Set(salesData.map(s => s.categoria))],
+    regioes: [...new Set(salesData.map(s => s.regiao))],
+    clientes: [...new Set(salesData.map(s => s.cliente))],
+    formasPagamento: [...new Set(salesData.map(s => s.formaPagamento))],
   }), [salesData]);
 
   // Aplicar filtros
   const filteredData = useMemo(() => {
     return salesData.filter(sale => {
-      if (filters.dataInicio && sale.dataVenda < filters.dataInicio) return false;
-      if (filters.dataFim && sale.dataVenda > filters.dataFim) return false;
+      if (filters.dataInicio && sale.data < filters.dataInicio) return false;
+      if (filters.dataFim && sale.data > filters.dataFim) return false;
       if (filters.produto && sale.produto !== filters.produto) return false;
-      if (filters.marca && sale.marca !== filters.marca) return false;
-      if (filters.loja && sale.loja !== filters.loja) return false;
-      if (filters.categoria && sale.categoria !== filters.categoria) return false;
+      if (filters.regiao && sale.regiao !== filters.regiao) return false;
+      if (filters.cliente && sale.cliente !== filters.cliente) return false;
+      if (filters.formaPagamento && sale.formaPagamento !== filters.formaPagamento) return false;
       return true;
     });
   }, [salesData, filters]);
 
   // Calcular KPIs
   const kpis: KPIData = useMemo(() => {
-    const faturamentoTotal = filteredData.reduce((sum, sale) => sum + sale.faturamento, 0);
-    const quantidadeTotal = filteredData.reduce((sum, sale) => sum + sale.qtdVendida, 0);
+    const faturamentoTotal = filteredData.reduce((sum, sale) => sum + sale.valor, 0);
+    const totalVendas = filteredData.length;
     
     return {
       faturamentoTotal,
-      quantidadeTotal,
-      ticketMedio: quantidadeTotal > 0 ? faturamentoTotal / quantidadeTotal : 0,
-      totalVendas: filteredData.length,
+      quantidadeTotal: totalVendas,
+      ticketMedio: totalVendas > 0 ? faturamentoTotal / totalVendas : 0,
+      totalVendas,
     };
   }, [filteredData]);
 
   // Dados dos gráficos
   const revenueByMonth = useMemo(() => groupByMonth(filteredData), [filteredData]);
-  const revenueByStore = useMemo(() => groupByStore(filteredData), [filteredData]);
-  const revenueByStoreType = useMemo(() => groupByStoreType(filteredData), [filteredData]);
-  const quantityByBrand = useMemo(() => groupByBrand(filteredData), [filteredData]);
+  const revenueByRegion = useMemo(() => groupByRegion(filteredData), [filteredData]);
+  const revenueByPaymentMethod = useMemo(() => groupByPaymentMethod(filteredData), [filteredData]);
+  const revenueByProduct = useMemo(() => groupByProduct(filteredData), [filteredData]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,7 +93,7 @@ const Index = () => {
             iconColor="text-secondary"
           />
           <KPICard
-            title="Quantidade Vendida"
+            title="Total de Vendas"
             value={formatNumber(kpis.quantidadeTotal)}
             icon={Package}
             iconColor="text-chart-3"
@@ -105,8 +105,8 @@ const Index = () => {
             iconColor="text-chart-4"
           />
           <KPICard
-            title="Total de Vendas"
-            value={formatNumber(kpis.totalVendas)}
+            title="Clientes Únicos"
+            value={formatNumber([...new Set(filteredData.map(s => s.cliente))].length)}
             icon={ShoppingCart}
             iconColor="text-chart-5"
           />
@@ -115,9 +115,9 @@ const Index = () => {
         {/* Gráficos */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <RevenueChart data={revenueByMonth} />
-          <StoreChart data={revenueByStore} />
-          <StoreTypePieChart data={revenueByStoreType} />
-          <BrandChart data={quantityByBrand} />
+          <StoreChart data={revenueByRegion} title="Faturamento por Região" />
+          <StoreTypePieChart data={revenueByPaymentMethod} title="Faturamento por Forma de Pagamento" />
+          <BrandChart data={revenueByProduct} title="Faturamento por Produto" />
         </div>
 
         {/* Footer Info */}

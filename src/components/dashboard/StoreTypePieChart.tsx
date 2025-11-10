@@ -4,11 +4,12 @@ import { formatCurrency } from '@/utils/dataUtils';
 
 interface StoreTypePieChartProps {
   data: Array<{ name: string; value: number }>;
+  title?: string;
 }
 
-const COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))'];
+const COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))', 'hsl(var(--chart-3))', 'hsl(var(--chart-4))'];
 
-export const StoreTypePieChart = ({ data }: StoreTypePieChartProps) => {
+export const StoreTypePieChart = ({ data, title = "Faturamento por Tipo de Loja" }: StoreTypePieChartProps) => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -26,7 +27,7 @@ export const StoreTypePieChart = ({ data }: StoreTypePieChartProps) => {
   return (
     <Card className="shadow-card">
       <CardHeader>
-        <CardTitle className="text-xl font-bold">Faturamento por Tipo de Loja</CardTitle>
+        <CardTitle className="text-xl font-bold">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>

@@ -4,9 +4,10 @@ import { formatCurrency } from '@/utils/dataUtils';
 
 interface StoreChartProps {
   data: Array<{ name: string; value: number }>;
+  title?: string;
 }
 
-export const StoreChart = ({ data }: StoreChartProps) => {
+export const StoreChart = ({ data, title = "Faturamento por Loja" }: StoreChartProps) => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -24,7 +25,7 @@ export const StoreChart = ({ data }: StoreChartProps) => {
   return (
     <Card className="shadow-card col-span-full lg:col-span-2">
       <CardHeader>
-        <CardTitle className="text-xl font-bold">Faturamento por Loja</CardTitle>
+        <CardTitle className="text-xl font-bold">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={350}>

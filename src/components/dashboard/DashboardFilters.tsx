@@ -14,9 +14,9 @@ interface DashboardFiltersProps {
   setFilters: (filters: FilterState) => void;
   uniqueValues: {
     produtos: string[];
-    marcas: string[];
-    lojas: string[];
-    categorias: string[];
+    regioes: string[];
+    clientes: string[];
+    formasPagamento: string[];
   };
 }
 
@@ -106,43 +106,43 @@ export const DashboardFilters = ({ filters, setFilters, uniqueValues }: Dashboar
             </SelectContent>
           </Select>
 
-          {/* Marca */}
-          <Select value={filters.marca} onValueChange={(value) => setFilters({ ...filters, marca: value })}>
+          {/* Região */}
+          <Select value={filters.regiao} onValueChange={(value) => setFilters({ ...filters, regiao: value })}>
             <SelectTrigger>
-              <SelectValue placeholder="Marca" />
+              <SelectValue placeholder="Região" />
             </SelectTrigger>
             <SelectContent>
-              {uniqueValues.marcas.map((marca) => (
-                <SelectItem key={marca} value={marca}>
-                  {marca}
+              {uniqueValues.regioes.map((regiao) => (
+                <SelectItem key={regiao} value={regiao}>
+                  {regiao}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
 
-          {/* Loja */}
-          <Select value={filters.loja} onValueChange={(value) => setFilters({ ...filters, loja: value })}>
+          {/* Cliente */}
+          <Select value={filters.cliente} onValueChange={(value) => setFilters({ ...filters, cliente: value })}>
             <SelectTrigger>
-              <SelectValue placeholder="Loja" />
+              <SelectValue placeholder="Cliente" />
             </SelectTrigger>
             <SelectContent>
-              {uniqueValues.lojas.map((loja) => (
-                <SelectItem key={loja} value={loja}>
-                  {loja}
+              {uniqueValues.clientes.map((cliente) => (
+                <SelectItem key={cliente} value={cliente}>
+                  {cliente}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
 
-          {/* Categoria */}
-          <Select value={filters.categoria} onValueChange={(value) => setFilters({ ...filters, categoria: value })}>
+          {/* Forma de Pagamento */}
+          <Select value={filters.formaPagamento} onValueChange={(value) => setFilters({ ...filters, formaPagamento: value })}>
             <SelectTrigger>
-              <SelectValue placeholder="Categoria" />
+              <SelectValue placeholder="Forma de Pagamento" />
             </SelectTrigger>
             <SelectContent>
-              {uniqueValues.categorias.map((categoria) => (
-                <SelectItem key={categoria} value={categoria}>
-                  {categoria}
+              {uniqueValues.formasPagamento.map((forma) => (
+                <SelectItem key={forma} value={forma}>
+                  {forma}
                 </SelectItem>
               ))}
             </SelectContent>

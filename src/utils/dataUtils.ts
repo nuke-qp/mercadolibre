@@ -27,12 +27,12 @@ export const groupByMonth = (sales: SaleData[]) => {
     const monthYear = new Intl.DateTimeFormat('pt-BR', { 
       year: 'numeric', 
       month: 'short' 
-    }).format(sale.dataVenda);
+    }).format(sale.data);
     
     if (!acc[monthYear]) {
       acc[monthYear] = 0;
     }
-    acc[monthYear] += sale.faturamento;
+    acc[monthYear] += sale.valor;
     return acc;
   }, {} as Record<string, number>);
 
@@ -45,13 +45,13 @@ export const groupByMonth = (sales: SaleData[]) => {
     });
 };
 
-// Agrupa vendas por loja
-export const groupByStore = (sales: SaleData[]) => {
+// Agrupa vendas por região
+export const groupByRegion = (sales: SaleData[]) => {
   const grouped = sales.reduce((acc, sale) => {
-    if (!acc[sale.loja]) {
-      acc[sale.loja] = 0;
+    if (!acc[sale.regiao]) {
+      acc[sale.regiao] = 0;
     }
-    acc[sale.loja] += sale.faturamento;
+    acc[sale.regiao] += sale.valor;
     return acc;
   }, {} as Record<string, number>);
 
@@ -60,31 +60,30 @@ export const groupByStore = (sales: SaleData[]) => {
     .sort((a, b) => b.value - a.value);
 };
 
-// Agrupa vendas por tipo de loja
-export const groupByStoreType = (sales: SaleData[]) => {
+// Agrupa vendas por forma de pagamento
+export const groupByPaymentMethod = (sales: SaleData[]) => {
   const grouped = sales.reduce((acc, sale) => {
-    if (!acc[sale.tipoLoja]) {
-      acc[sale.tipoLoja] = 0;
+    if (!acc[sale.formaPagamento]) {
+      acc[sale.formaPagamento] = 0;
     }
-    acc[sale.tipoLoja] += sale.faturamento;
+    acc[sale.formaPagamento] += sale.valor;
     return acc;
   }, {} as Record<string, number>);
 
   return Object.entries(grouped).map(([name, value]) => ({ name, value }));
 };
 
-// Agrupa vendas por marca
-export const groupByBrand = (sales: SaleData[]) => {
+// Agrupa vendas por produto
+export const groupByProduct = (sales: SaleData[]) => {
   const grouped = sales.reduce((acc, sale) => {
-    if (!acc[sale.marca]) {
-      acc[sale.marca] = 0;
+    if (!acc[sale.produto]) {
+      acc[sale.produto] = 0;
     }
-    acc[sale.marca] += sale.qtdVendida;
+    acc[sale.produto] += sale.valor;
     return acc;
   }, {} as Record<string, number>);
 
   return Object.entries(grouped)
     .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 10);
+    .sort((a, b) => b.value - a.value);
 };

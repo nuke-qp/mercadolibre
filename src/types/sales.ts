@@ -1,24 +1,19 @@
 export interface SaleData {
-  skuVendido: string;
-  qtdVendida: number;
+  data: Date;
+  cliente: string;
+  regiao: string;
   produto: string;
-  marca: string;
-  categoria: string;
-  precoUnitario: number;
-  faturamento: number;
-  loja: string;
-  dataVenda: Date;
-  tipoLoja: 'Loja Física' | 'Online';
-  codigoCliente: number;
+  valor: number;
+  formaPagamento: string;
 }
 
 export interface FilterState {
   dataInicio?: Date;
   dataFim?: Date;
   produto?: string;
-  marca?: string;
-  loja?: string;
-  categoria?: string;
+  regiao?: string;
+  cliente?: string;
+  formaPagamento?: string;
 }
 
 export interface KPIData {
