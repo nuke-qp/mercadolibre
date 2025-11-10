@@ -1,4 +1,4 @@
-# Dashboard de Vendas - MercadoLivre (Sales Viz)
+# Dashboard de Vendas - MercadoLivre
 
 Este é um painel de visualização de dados (dashboard) interativo, construído para analisar os dados de vendas da planilha `Exercicio_Dashboard_Excel.xlsx`. O projeto foca em apresentar métricas de performance de vendas de forma clara e intuitiva, utilizando tecnologias web modernas.
 
@@ -43,7 +43,7 @@ Siga os passos abaixo para executar o projeto na sua máquina.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/Ma2903/mercadolibre-sales-viz.git
+    git clone https://github.com/Ma2903/mercadolibre.git
     cd mercadolibre-sales-viz
     ```
 
